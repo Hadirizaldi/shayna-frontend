@@ -16,7 +16,7 @@ import HeroMain from '@/components/hero/HeroMain.vue';
 import BannerMain from '@/components/banner/BannerMain.vue';
 import InstaGallery from '@/components/InstaGallery.vue';
 import LogoMain from '@/components/logo_partner/LogoMain.vue';
-import FooterMain from '@/components/footer/FooterMain.vue'
+import FooterMain from '@/components/footer/FooterMain.vue';
 
 
 export default {
