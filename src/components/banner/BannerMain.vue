@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 mt-5">
-          <Carousel class="product-slider" :items-to-show="3">
+          <Carousel class="product-slider" :items-to-show="3" :autoplay="3500" :wrap-around="true">
             <slide v-for="slide in 6" :key="slide">
               <div class="product-item">
                 <div class="pi-pic">
@@ -27,9 +27,7 @@
                 </div>
               </div>
             </slide>
-            <template #addons>
-              <pagination />
-            </template>
+
           </Carousel>
         </div>
       </div>
@@ -40,14 +38,13 @@
 <script>
 // for carousel
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination } from 'vue3-carousel'
+import { Carousel, Slide } from 'vue3-carousel'
 
 export default {
   name: "BannerMain",
   components: {
     Carousel,
     Slide,
-    Pagination,
   }
 }
 </script>

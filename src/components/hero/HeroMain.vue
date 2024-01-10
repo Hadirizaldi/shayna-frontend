@@ -1,7 +1,7 @@
 <template>
   <!-- Hero Section Begin -->
   <section class="hero-section">
-    <Carousel :items-to-show="1">
+    <Carousel :items-to-show="1" :wrap-around="true">
       <slide v-for="slide in 10" :key="slide">
         <div class="single-banner-info set-bg" style="background-image: url('/img/hero-1.jpg');">
           <div class="row banner-info">
