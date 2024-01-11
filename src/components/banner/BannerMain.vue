@@ -13,7 +13,7 @@
                       <li class="w-icon active">
                         <a href="#"><i class="icon_bag_alt"></i></a>
                       </li>
-                      <li class="quick-view"><a href="product.html">+ Quick View</a></li>
+                      <li class="quick-view"><router-link to="product">+ Quick View</router-link></li>
                     </ul>
                   </div>
                   <div class="pi-text">
@@ -90,8 +90,8 @@ export default {
 
 <style scoped>
 .carousel__item {
-  margin-left: .25rem;
-  margin-right: .25rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
   width: 100%;
 }
 

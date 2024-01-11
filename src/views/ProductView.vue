@@ -75,6 +75,7 @@
       </div>
     </section>
     <!-- Product Shop Section End -->
+    <relatedProduct />
     <footer-main />
   </div>
 </template>
@@ -86,6 +87,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 import HeaderMain from '@/components/header/HeaderMain.vue';
 import FooterMain from '@/components/footer/FooterMain.vue';
+import RelatedProductMain from '@/components/RelatedProductMain.vue';
 
 export default {
   name: "ProductView",
@@ -93,6 +95,7 @@ export default {
   components: {
     HeaderMain,
     FooterMain,
+    relatedProduct: RelatedProductMain,
     Carousel,
     Slide,
     Pagination,
