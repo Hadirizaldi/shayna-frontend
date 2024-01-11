@@ -3,10 +3,12 @@
   <div class="partner-logo">
     <div class="container">
       <Carousel class="logo-carousel " :items-to-show="5" :wrap-around="true">
-        <slide v-for="slide in 10" :key="slide">
-          <div class="logo-item">
-            <div class="tablecell-inner">
-              <img src="/img/logo-carousel/logo-1.png" alt="" />
+        <slide v-for="(logo, slide) in logoUrls" :key="slide">
+          <div class="carousel__item">
+            <div class="logo-item">
+              <div class="tablecell-inner">
+                <img :src="logo" alt="logo_partner_image" />
+              </div>
             </div>
           </div>
         </slide>
@@ -27,6 +29,18 @@ export default {
   components: {
     Carousel,
     Slide,
+  },
+
+  data() {
+    return {
+      logoUrls: [
+        "/img/logo-carousel/logo-1.png",
+        "/img/logo-carousel/logo-2.png",
+        "/img/logo-carousel/logo-3.png",
+        "/img/logo-carousel/logo-4.png",
+        "/img/logo-carousel/logo-5.png",
+      ]
+    }
   }
 
 }

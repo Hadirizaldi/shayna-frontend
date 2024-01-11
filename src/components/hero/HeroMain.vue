@@ -1,20 +1,23 @@
 <template>
   <!-- Hero Section Begin -->
   <section class="hero-section">
-    <Carousel :items-to-show="1" :wrap-around="true">
-      <slide v-for="slide in 10" :key="slide">
-        <div class="single-banner-info set-bg" style="background-image: url('/img/hero-1.jpg');">
-          <div class="row banner-info">
-            <div class="container">
-              <div class="col-lg-5">
-                <span>Bag,kids</span>
-                <h1>Black friday</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et
-                  dolore
-                </p>
-                <a href="#" class="primary-btn">Shop Now</a>
+    <Carousel id="thumbnails" :items-to-show="1" :wrap-around="true">
+      <slide v-for="(image, slide) in backgroundImages" :key="slide">
+        <div class="carousel__item">
+          <div class="single-banner-info set-bg" style="background-image: url('/img/hero-2.jpg');">
+            <!-- <div class="single-banner-info" :style="{ backgroundImage: 'url(' + image + ')' }"> -->
+            <div class="row banner-info">
+              <div class="container">
+                <div class="col-lg-5">
+                  <span>Bag,kids</span>
+                  <h1>Black friday</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                  </p>
+                  <a href="#" class="primary-btn">Shop Now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -44,11 +47,24 @@ export default {
     Slide,
     Pagination,
     Navigation
+  },
+
+  data() {
+    return {
+      backgroundImages: [
+        "/img/hero-1.jpg",
+        "/img/hero-2.jpg"
+      ]
+    }
   }
 }
 </script>
 
 <style scoped>
+.carousel__item {
+  width: 100%;
+}
+
 .set-bg {
   width: 100%;
   background-repeat: no-repeat;
